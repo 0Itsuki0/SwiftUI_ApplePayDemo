@@ -175,11 +175,6 @@ struct ContentView: View {
                     }
                 }
 
-                
-                
-                
-                
-                
                 Section {
                     PayWithApplePayButton(.checkout, action: {
                         self.paymentManager.processingPayment = true
@@ -194,13 +189,6 @@ struct ContentView: View {
                     .listRowInsets(.horizontal, 0)
                     .listRowBackground(Color.clear)
                 }
-                
-                
-                
-                
-                
-                
-                
                 
                 // NOT using the following because request created this way will never be updated based on the cart because of the following error.
                 // - Accessing Environment's value outside of being installed on a View. This will always read the default value and will not update.

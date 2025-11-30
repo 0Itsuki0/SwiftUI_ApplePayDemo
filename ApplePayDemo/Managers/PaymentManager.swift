@@ -164,7 +164,7 @@ class PaymentManager: NSObject {
         let coupon = cart.coupon
         let shippingMethod = cart.shipping
         
-        var summaryItems = products.map(\.paymentSummaryItem)
+        var summaryItems = products.filter({$0.quantity > 0}).map(\.paymentSummaryItem)
         if let coupon {
             let discount = coupon.createPaymentSummaryItem(products: products)
             summaryItems.append(discount)
